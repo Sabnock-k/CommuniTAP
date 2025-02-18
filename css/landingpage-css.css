@@ -1,0 +1,164 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e8eaf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Text section */
+.text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Button styles */
+.task-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 40px;
+}
+
+.task-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* Checkbox list */
+.features-list {
+    list-style: none;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-color: #3b82f6;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Image section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height to fit the whole page */
+}
+
+.illustration {
+    position: relative;
+    width: 100%; /* Adjust width to fit the whole page */
+    max-width: none; /* Remove max-width constraint */
+    height: 100%; /* Adjust height to fit the whole page */
+}
+
+.person-image {
+    width: 100%;
+    height: 100%; /* Adjust height to fit the whole page */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+/* Email form (hidden initially) */
+.email-form {
+    display: none;
+    margin-top: 20px;
+}
+
+.email-form input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.email-form button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-section {
+        order: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .image-section {
+        order: 1;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-item {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}

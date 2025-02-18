@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/landingpage-css.css">
+    <title>CommuniTAP - Helping the neighborhood with fun tasks</title>
 </head>
 <body>
-<div class="landingpage">
-  <div class="communi-tap">CommuniTAP</div>
-  <div class="helping-the-neighborhood-with-fun-tasks">
-    Helping the neighborhood with fun tasks
-  </div>
-  <div class="frame-427320603">
-    <div class="frame-427320600">
-      <div class="group-427320600">
-        <div class="rectangle-1190"></div>
-        <img class="bi-check" src="bi-check0.svg" />
-      </div>
-      <div class="help-to-level-up">Help to level UP</div>
+    <div class="container">
+        <div class="text-section">
+            <h1>CommuniTAP</h1>
+            <p class="subtitle">Helping the neighborhood with fun tasks</p>
+            
+            <button id="task-button" class="task-button">
+                <span class="icon">🎯</span>
+                Take a task now!
+            </button>
+            
+            <div id="email-form" class="email-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Submit</button>
+            </div>
+            
+            <ul class="features-list">
+                <li class="feature-item">
+                    <div class="checkbox">✓</div>
+                    Help to level UP
+                </li>
+                <li class="feature-item">
+                    <div class="checkbox">✓</div>
+                    Tap and pass the completed task
+                </li>
+                <li class="feature-item">
+                    <div class="checkbox">✓</div>
+                    Earn rewards!
+                </li>
+            </ul>
+        </div>
+        
+        <div class="image-section">
+            <div class="illustration">
+                <img src="Logos/Human-logo.png" alt="Person with an idea" class="person-image">
+            </div>
+        </div>
     </div>
-    <div class="frame-427320601">
-      <div class="group-427320600">
-        <div class="rectangle-1190"></div>
-        <img class="bi-check2" src="bi-check1.svg" />
-      </div>
-      <div class="tap-and-pass-the-completed-task">
-        Tap and pass the completed task
-      </div>
-    </div>
-    <div class="frame-427320602">
-      <div class="group-427320600">
-        <div class="rectangle-1190"></div>
-        <img class="bi-check3" src="bi-check2.svg" />
-      </div>
-      <div class="earn-rewads">Earn rewads!</div>
-    </div>
-  </div>
-  <img class="human-logo-1" src="human-logo-10.png" />
-  <div class="button">
-    <img class="thumbs-up" src="thumbs-up0.svg" />
-    <div class="take-a-task-now">Take a task now!</div>
-  </div>
-</div>
+    
+    <script>
+        // Simple script to show email form when button is clicked
+        document.getElementById('task-button').addEventListener('click', function() {
+            document.getElementById('email-form').style.display = 'block';
+            this.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
