@@ -12,15 +12,10 @@
             <h1>CommuniTAP</h1>
             <p class="subtitle">Helping the neighborhood with fun tasks</p>
             
-            <button id="task-button" class="task-button">
+            <button id="task-button" class="task-button" onclick="window.location.href='register.php'">
                 <span class="icon">🎯</span>
                 Take a task now!
             </button>
-            
-            <div id="email-form" class="email-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Submit</button>
-            </div>
             
             <ul class="features-list">
                 <li class="feature-item">
@@ -40,7 +35,7 @@
         
         <div class="image-section">
             <div class="illustration">
-                <img src="Logos/Human-logo.png" alt="Person with an idea" class="person-image">
+                <img src="images/Human-logo.png" alt="Person with an idea" class="person-image">
             </div>
         </div>
     </div>

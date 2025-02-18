@@ -1,0 +1,245 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #D4D9E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Form section */
+.form-section {
+    flex: 1;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #111827;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #e5e7eb;
+}
+
+.divider-text {
+    padding: 0 10px;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Social login buttons */
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #f9fafb;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.social-btn span {
+    font-size: 0.875rem;
+}
+
+.or-divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #6b7280;
+    position: relative;
+}
+
+.or-divider:before,
+.or-divider:after {
+    content: "";
+    display: block;
+    width: 45%;
+    height: 1px;
+    background: #e5e7eb;
+    position: absolute;
+    top: 50%;
+}
+
+.or-divider:before {
+    left: 0;
+}
+
+.or-divider:after {
+    right: 0;
+}
+
+/* Form inputs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* Checkbox style */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.checkbox-label {
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.checkbox-label a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #1f2937;
+}
+
+.submit-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 30px;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.login-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Image section */
+.image-section {
+    flex: 1;
+    background-color: #D4D9E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.illustration {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .image-section {
+        order: -1;
+        padding: 30px;
+    }
+    
+    .illustration {
+        max-width: 60%;
+    }
+}
