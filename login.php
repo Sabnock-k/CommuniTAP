@@ -1,3 +1,34 @@
+<?php
+session_start();
+require 'conn/db.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $stmt = $conn->prepare("SELECT password FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($db_password);
+        $stmt->fetch();
+
+        if ($password === $db_password) {
+            $_SESSION['username'] = $username;
+            header('Location: homepage.php');
+            exit();
+        } else {
+            $error_message = 'Invalid username or password';
+        }
+    } else {
+        $error_message = 'Invalid username or password';
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +60,15 @@
         
         <div class="or-divider">or</div>
         
-        <form>
+        <form method="POST" action="login.php">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="John" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="abc@gmail.com" required>
+                <input type="text" id="username" name="username" placeholder="John" required>
             </div>
             
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="••••••••" required>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
             </div>
             
             <button type="submit" class="submit-btn">

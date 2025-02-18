@@ -16,9 +16,9 @@
         
         <div class="navigation">
             <a href="#" class="nav-item">Spend points</a>
-            <a href="#" class="nav-item">My Tasks</a>
-            <a href="#" class="nav-item">Available Tasks</a>
-            <a href="#" class="nav-item">Create Task</a>
+            <a href="homepage.php" class="nav-item">My Tasks</a>
+            <a href="availtask.php" class="nav-item">Available Tasks</a>
+            <a href="createtask.php" class="nav-item">Create Task</a>
             <a href="logout.php" class="nav-item">Log-out</a>
         </div>
         
